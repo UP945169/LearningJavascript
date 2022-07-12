@@ -14,7 +14,11 @@ let sumEl = document.querySelector("#sum-el")
 
 let cardsEl = document.querySelector("#cards-el")
 
-function startGame() {
+function startGame(){
+    renderGame()
+}
+
+function renderGame() {
     if(sum < 21){
         message = "You can keep playing"
         
@@ -32,6 +36,17 @@ function startGame() {
     messageEl.textContent = message
     sumEl.textContent = "Sum: " + sum
     cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
+}
+
+function drawCards(){
+    console.log("Draw new cards from deck")
+    //create new card vars
+    firstCard = 10
+    
+    sum += firstCard
+
+    renderGame()
+
 }
 
 //CASH OUT
