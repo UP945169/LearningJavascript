@@ -1,5 +1,7 @@
 let firstCard = 8
 let secondCard = 5
+//cards Arrary
+let cards = [firstCard,secondCard]
 
 let sum = firstCard + secondCard
 
@@ -35,16 +37,17 @@ function renderGame() {
 
     messageEl.textContent = message
     sumEl.textContent = "Sum: " + sum
-    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
+    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1]
 }
 
 function drawCards(){
     console.log("Draw new cards from deck")
     //create new card vars
-    firstCard = 10
-    
-    sum += firstCard
+    newCard = 10
 
+    
+    sum += newCard
+    cards.push(newCard)
     renderGame()
 
 }
