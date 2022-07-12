@@ -15,6 +15,7 @@ h1 {
 button {
     background-color: goldenrod;
     color: #016f32;
+    display: inline;
     width: 150px;
     font-weight: bold;
     border: none;

@@ -12,6 +12,8 @@ let message = ""
 //let sumEl = document.getElementById("sum-el")
 let sumEl = document.querySelector("#sum-el")
 
+let cardsEl = document.querySelector("#cards-el")
+
 function startGame() {
     if(sum < 21){
         message = "You can keep playing"
@@ -29,6 +31,7 @@ function startGame() {
 
     messageEl.textContent = message
     sumEl.textContent = "Sum: " + sum
+    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
 }
 
 //CASH OUT
