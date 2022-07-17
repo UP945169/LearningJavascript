@@ -15,6 +15,14 @@ let sumEl = document.querySelector("#sum-el")
 
 let cardsEl = document.querySelector("#cards-el")
 
+let player = {
+
+    Name: "Per ",
+    Chip: 145
+}
+
+let playerEl = document.querySelector("#Player-el") 
+playerEl.textContent = player.Name + ": $" + player.Chip
 
 function getRandomCard() {
     // if 1     -> return 11
