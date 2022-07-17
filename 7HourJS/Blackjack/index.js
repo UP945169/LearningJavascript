@@ -17,7 +17,10 @@ let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.querySelector("#cards-el")
 
 
+function getRandomCard() {
+    return Math.floor(Math.random() * 13) + 1
 
+}
 
 function startGame(){
     renderGame()
