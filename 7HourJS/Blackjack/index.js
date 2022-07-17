@@ -1,12 +1,11 @@
-let firstCard = 8
-let secondCard = 5
-//cards Arrary
-let cards = [firstCard,secondCard]
 
-let sum = firstCard + secondCard
+//cards Arrary
+let cards = []
+
+
 
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 
 let messageEl = document.getElementById("message-el")
 let message = ""
@@ -32,6 +31,11 @@ function getRandomCard() {
 }
 
 function startGame(){
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = []
+    let sum = firstCard + secondCard
     renderGame()
 }
 
@@ -59,14 +63,15 @@ function renderGame() {
 }
 
 function drawCards(){
-    console.log("Draw new cards from deck")
-    //create new card vars
-    newCard = 10
+    if (isAlive == true && hasBlackJack == false){
+        let card = getRandomCard()
+        sum += newCard
+        cards.push(newCard)
+        renderGame()
+    }
 
     
-    sum += newCard
-    cards.push(newCard)
-    renderGame()
+   
 
 }
 
